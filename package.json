@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:dist/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Moab-786/Portfolio.git"
+  },
+  "author": "Mohd Abdullah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Moab-786/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Moab-786/Portfolio#readme",
+  "dependencies": {
+    "sass": "^1.89.2"
+  }
+}
