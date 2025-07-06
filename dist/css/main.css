@@ -1,10 +1,41 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.menu-btn .btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: white;
+  transition: all 0.5s ease-out;
+}
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+.menu-btn.close .btn-line {
+  background: #eece1a;
+}
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #444;
-  color: set-text-color(#444);
+  color: white;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -26,14 +57,14 @@ body::after {
   background: rgba(68, 68, 68, 0.5);
 }
 
-h1, h2 {
+h1, h2, h3 {
   margin: 0;
   font-weight: 400;
 }
-h1.lg-heading, h2.lg-heading {
+h1.lg-heading, h2.lg-heading, h3.lg-heading {
   font-size: 6rem;
 }
-h1.sm-heading, h2.sm-heading {
+h1.sm-heading, h2.sm-heading, h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
   background: rgba(73.1, 73.1, 73.1, 0.5);
