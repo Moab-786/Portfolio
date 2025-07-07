@@ -10,7 +10,7 @@
   width: 28px;
   height: 3px;
   margin: 0 0 5px 0;
-  background: white;
+  background: #fff;
   transition: all 0.5s ease-out;
 }
 .menu-btn.close {
@@ -91,11 +91,14 @@
   text-transform: uppercase;
   padding: 1rem 0;
   font-weight: 500;
-  color: white;
+  color: #fff;
   text-decoration: none;
   transition: all 0.5s ease-out;
 }
 .menu .nav-link:hover {
+  color: #eece1a;
+}
+.menu .nav-link.current {
   color: #eece1a;
 }
 
@@ -115,54 +118,13 @@
   transition-delay: 0.4s;
 }
 
-@media screen and (min-width: 501px) and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center;
-  }
-  main .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  div.menu-branding,
-  ul.menu-nav {
-    float: none;
-    width: 100%;
-    min-height: 0;
-  }
-  div.menu-branding.show,
-  ul.menu-nav.show {
-    transform: translate3d(0, 0, 0);
-  }
-  .menu-nav {
-    height: 70vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 20px;
-  }
-  .menu-nav .nav-link {
-    padding: 0.5rem 0;
-  }
-  .menu-branding {
-    height: 30vh;
-    transform: translate3d(100%, 0, 0);
-  }
-  .menu-branding .potrait {
-    height: 200px;
-    width: 200px;
-  }
-}
-@media screen and (max-width: 500px) {
-  .main#home h1 {
-    margin-top: 10vh;
-  }
-}
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #444;
-  color: white;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -214,7 +176,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(100vh - 60px);
 }
 main .icons {
   margin-top: 1rem;
@@ -231,6 +193,93 @@ main#home {
 }
 main#home h1 {
   margin-top: 20vh;
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimg bio bio" "job1 job2 job3";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.about-info .bio-img {
+  grid-area: bioimg;
+  margin: auto;
+  height: 350px;
+  width: 330px;
+  border-radius: 50%;
+  border: #eece1a 3px solid;
+}
+.about-info .bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+.about-info .job-1 {
+  grid-area: job1;
+}
+.about-info .job-2 {
+  grid-area: job2;
+}
+.about-info .job-3 {
+  grid-area: job3;
+}
+.about-info .job {
+  background: rgb(80.75, 80.75, 80.75);
+  padding: 0.5rem;
+  border-bottom: #eece1a 5px solid;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgb(42.5, 42.5, 42.5);
+  height: 60px;
+  color: #fff;
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+  div.menu-branding,
+  ul.menu-nav {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  div.menu-branding.show,
+  ul.menu-nav.show {
+    transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 70vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 20px;
+  }
+  .menu-nav .nav-link {
+    padding: 0.5rem 0;
+  }
+  .menu-branding {
+    height: 30vh;
+    transform: translate3d(100%, 0, 0);
+  }
+  .menu-branding .potrait {
+    height: 200px;
+    width: 200px;
+  }
+  .about-info {
+    grid-template-areas: "bioimg" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main#home h1 {
+    margin-top: 10vh;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
