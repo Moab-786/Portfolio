@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Responsive Portfolio Website",
   "main": "index.js",
+  "homepage":"https://Moab-786.github.io/Portfolio",
   "scripts": {
-    "sass": "sass --watch scss:dist/css"
+    "sass": "sass --watch scss:dist/css",
+    "deploy":"gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
   },
   "homepage": "https://github.com/Moab-786/Portfolio#readme",
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "sass": "^1.89.2"
   }
 }
