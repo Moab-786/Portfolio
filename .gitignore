@@ -1,7 +1,11 @@
 node_modules/
 dist/fontawesome-free-6.7.2-web/
-# Ignore large Font Awesome source files
 dist/fontawesome-free-6.7.2-web/less
 dist/fontawesome-free-6.7.2-web/scss
 dist/fontawesome-free-6.7.2-web/js
 dist/fontawesome-free-6.7.2-web/metadata
+fontawesome-free-6.7.2-web/
+fontawesome-free-6.7.2-web/less
+fontawesome-free-6.7.2-web/scss
+fontawesome-free-6.7.2-web/js
+fontawesome-free-6.7.2-web/metadata
